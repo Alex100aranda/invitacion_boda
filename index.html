@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación de Boda</title>
+  <link rel="stylesheet" href="styles.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6Bf4R1+GF+5SJf1w7eMZ5lPb3W+36fKwB7A/6yd3C1D7JvDHHqFZq9RkZsDfYgIXuCkYyAHXgWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+</head>
+<body>
+
+<!-- Sección Hero -->
+<section class="hero" data-aos="fade-down">
+  <div class="overlay">
+    <h1>¡Nos casamos!</h1>
+    <h2>Ana & Luis</h2>
+  </div>
+</section>
+
+<!-- Sección de invitación + contador + música -->
+<section class="invitation-info" data-aos="fade-up">
+  
+  <button id="music-btn" class="music-btn">🎵 Activar música</button>
+  <audio id="bg-music" loop>
+    <source src="musica.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML.
+  </audio>
+
+  <h3>¡Estás invitado!</h3>
+  <p>Queremos que seas parte de este momento tan especial.</p>
+
+  <div class="countdown-circle" id="countdown">
+    <!-- JS llenará los círculos -->
+  </div>
+</section>
+
+
+<!-- Sección ceremonia -->
+<section class="event-section" data-aos="fade-up">
+  <div class="event-content">
+    <i class="fas fa-church event-icon"></i>
+    <h2>Ceremonia</h2>
+    <h3>Iglesia Santa Clara</h3>
+    <p>Te esperamos el</p>
+
+    <div class="event-date">
+      <div class="date">
+        <span class="day">15</span>
+        <span class="month">Noviembre</span>
+      </div>
+      <div class="divider"></div>
+      <div class="time">
+        <span>5:00 PM</span>
+      </div>
+    </div>
+
+    <p class="address">Av. de los Pinos #123, Ciudad Jardín</p>
+
+    <button class="location-btn">
+      <i class="fas fa-map-marker-alt"></i> Ver ubicación
+    </button>
+  </div>
+</section>
+
+<!-- Sección celebración -->
+<section class="event-section alt-bg" data-aos="fade-up">
+  <div class="event-content">
+    <i class="fas fa-glass-cheers event-icon"></i>
+    <h2>Celebración</h2>
+    <h3>Salón El Encanto</h3>
+    <p>Después de la ceremonia acompáñanos a celebrar el amor</p>
+
+    <div class="event-date">
+      <div class="date">
+        <span class="day">15</span>
+        <span class="month">Noviembre</span>
+      </div>
+      <div class="divider"></div>
+      <div class="time">
+        <span>7:00 PM</span>
+      </div>
+    </div>
+
+    <p class="address">Av. Magnolia #456, Ciudad Jardín</p>
+
+    <button class="location-btn">
+      <i class="fas fa-map-marker-alt"></i> Ver ubicación
+    </button>
+  </div>
+</section>
+
+<!-- Sección Código de Vestimenta -->
+<section class="dress-code" data-aos="fade-up">
+  <div class="dress-code-content">
+    <img src="vestimenta.jpg" alt="Código de vestimenta" class="dress-image">
+    <h3>Código de Vestimenta</h3>
+    <p>Formal - No niños</p>
+  </div>
+</section>
+
+<!-- Sección Comparte Fotos -->
+<section class="share-photos" data-aos="fade-up">
+  <div class="share-photos-content">
+    <i class="fas fa-camera-retro share-icon"></i>
+    <h3>Comparte Fotos</h3>
+    <p>Sube fotos de la boda al álbum</p>
+
+    <button class="photo-btn upload-btn">
+      <i class="fas fa-upload"></i> Subir fotos
+    </button>
+
+    <button class="photo-btn view-btn">
+      <i class="fas fa-images"></i> Ver fotos subidas
+    </button>
+  </div>
+</section>
+
+
+<!-- Sección Nosotros -->
+<section class="about-us" data-aos="fade-up">
+  <div class="about-us-content">
+    <h3>Nosotros</h3>
+    <p>Un pequeño vistazo a nuestra historia de amor</p>
+    
+    <div class="photo-collage">
+      <img src="nosotros1.jpeg" alt="Foto 1">
+      <img src="nosotros2.jpeg" alt="Foto 2">
+      <img src="nosotros3.jpeg" alt="Foto 3">
+      <img src="nosotros4.jpeg" alt="Foto 4">
+    </div>
+  </div>
+</section>
+
+<!-- Sección Mesa de Regalos -->
+<section class="gift-registry" data-aos="fade-up">
+  <div class="gift-content">
+    <i class="fas fa-gift gift-icon"></i>
+    <h2>Regalos</h2>
+    <p>Lo más importante es su presencia, pero si deseas esta es nuestra mesa de regalos.</p>
+    <p class="event-number">Número de evento: 123456789</p>
+    <button class="gift-btn">Ver mesa</button>
+  </div>
+</section>
+
+
+<!-- Sección Confirmar Asistencia -->
+<section class="rsvp" data-aos="fade-up">
+  <div class="rsvp-content">
+    <h2>Confirmar Asistencia</h2>
+    <p>Por favor, confirma tu asistencia llenando el siguiente formulario:</p>
+
+    <form id="rsvp-form">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="form-group">
+        <label for="asistiras">¿Asistirás?</label>
+        <select id="asistiras" name="asistiras" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="rsvp-btn">Confirmar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Sección Final: Te esperamos -->
+<section class="final-section">
+  <h2>¡Te esperamos!</h2>
+  <p class="bride-groom">Ana & Luis</p>
+</section>
+
+
+
+
+<script>
+  document.getElementById("rsvp-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const asistencia = document.getElementById("asistiras").value;
+    const comentarios = document.getElementById("comentarios").value.trim();
+
+    const mensaje = `Hola, soy *${nombre}*.\nAsistiré: *${asistencia}*.\nComentarios: ${comentarios || "Ninguno."}`;
+    
+    // Reemplaza este número con el tuyo en formato internacional sin +
+    const numeroWhatsApp = "5215536659768";
+
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>

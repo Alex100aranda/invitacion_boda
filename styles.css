@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuentes */
+h1, h2, h3 {
+  font-family: 'Dancing Script', cursive;
+}
+
+
+
+body, html {
+  font-family: 'Georgia', serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Sección Hero */
+.hero {
+  background-image: url('img.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8vh;
+  position: relative;
+}
+
+.overlay {
+  
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.overlay h1 {
+  font-size: 9vw;
+}
+
+.overlay h2 {
+  font-size: 6vw;
+}
+
+/* Sección de invitación */
+.invitation-info {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f8f8f8;
+}
+
+.invitation-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.invitation-info p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Contador con círculos */
+.countdown-circle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.time-box {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.time-box span {
+  font-size: 1.2rem;
+}
+
+.time-box label {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Botón de música */
+.music-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.music-btn:hover {
+  background-color: #c0982c;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  .overlay h1 { font-size: 3rem; }
+  .overlay h2 { font-size: 2rem; }
+
+  .time-box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .time-box span {
+    font-size: 1.6rem;
+  }
+
+  .time-box label {
+    font-size: 1rem;
+  }
+}
+
+/* Estilos para móviles */
+@media (max-width: 767px) {
+  .time-box {
+    width: 65px;
+    height: 65px;
+  }
+
+  .time-box span {
+    font-size: 1rem;
+  }
+
+  .time-box label {
+    font-size: 0.7rem;
+  }
+
+  .countdown-circle {
+    gap: 0.5rem;
+    flex-wrap: nowrap; /* Fuerza que estén en una sola línea */
+    justify-content: center;
+  }
+}
+
+
+/* Estilo base para ambas secciones */
+.event-section {
+  padding: 3rem 1rem;
+  background-color: #fffdf9;
+  text-align: center;
+}
+
+.alt-bg {
+  background-color: #f8f8f8;
+}
+
+.event-content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.event-icon {
+  font-size: 3rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.event-section h2 {
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.event-section h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.event-section p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.date {
+  text-align: right;
+}
+
+.date .day {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.date .month {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.divider {
+  width: 2px;
+  height: 40px;
+  background-color: #ccc;
+}
+
+.time {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.address {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.location-btn:hover {
+  background-color: #c0982c;
+}
+
+@media (max-width: 768px) {
+  .ceremony-content,
+  .celebration-content {
+    padding: 1rem;
+  }
+
+  .ceremony h2,
+  .celebration h2 {
+    font-size: 2rem;
+  }
+
+  .ceremony h3,
+  .celebration h3 {
+    font-size: 1.2rem;
+  }
+
+  .date .day,
+  .celebration-date .day {
+    font-size: 1.5rem;
+  }
+
+  .time span {
+    font-size: 1rem;
+  }
+}
+
+
+/* Sección Código de Vestimenta */
+.dress-code {
+  padding: 3rem 1rem;
+  background-color: #fffdf9;
+  text-align: center;
+}
+
+.dress-code-content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.dress-image {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.dress-code h3 {
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.dress-code p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+
+
+/* Sección Comparte Fotos */
+.share-photos {
+  padding: 3rem 1rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.share-photos-content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.share-icon {
+  font-size: 3rem;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.share-photos h3 {
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.share-photos p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.photo-btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.photo-btn i {
+  margin-right: 0.5rem;
+}
+
+.photo-btn:hover {
+  background-color: #c0982c;
+}
+
+
+
+/* Sección Nosotros */
+.about-us {
+  padding: 3rem 1rem;
+  background-color: #fffdf9;
+  text-align: center;
+}
+
+.about-us-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-us h3 {
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.about-us p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.photo-collage img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-collage img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Sección Nosotros */
+.about-us {
+  padding: 3rem 1rem;
+  background-color: #fffdf9;
+  text-align: center;
+}
+
+.about-us-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-us h3 {
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.about-us p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.photo-collage img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-collage img:hover {
+  transform: scale(1.05);
+}
+
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .photo-collage {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    max-width: 800px;
+    gap: 1rem;
+  }
+}
+
+/* Mesa de regalos */
+.gift-registry {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #fffdf9;
+}
+
+.gift-content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.gift-icon {
+  font-size: 3rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.gift-registry h2 {
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.gift-registry p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.event-number {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.gift-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.gift-btn:hover {
+  background-color: #c0982c;
+}
+
+
+/* Confirmacion */
+/* Estilo general del formulario */
+.rsvp {
+  background-color: #fefefe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.rsvp h2 {
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.rsvp p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.rsvp-content {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos del formulario */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #d4af37;
+  outline: none;
+}
+
+/* Botón */
+.rsvp-btn {
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-btn:hover {
+  background-color: #d4af37;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .rsvp-content {
+    padding: 20px;
+  }
+
+  .rsvp h2 {
+    font-size: 1.5rem;
+  }
+
+  .rsvp p {
+    font-size: 0.95rem;
+  }
+}
+
+/* seccion final */
+.final-section {
+  background-color: #f8f1f1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.final-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.final-section .bride-groom {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .final-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .final-section .bride-groom {
+    font-size: 1.4rem;
+  }
+}
