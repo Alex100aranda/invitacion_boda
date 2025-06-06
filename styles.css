@@ -26,7 +26,7 @@ body, html {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 8vh;
+  padding-top: 5vh;
   position: relative;
 }
 
@@ -41,11 +41,11 @@ body, html {
 }
 
 .overlay h1 {
-  font-size: 9vw;
+  font-size: 14vw;
 }
 
 .overlay h2 {
-  font-size: 6vw;
+  font-size: 10vw;
 }
 
 /* Sección de invitación */
@@ -238,19 +238,23 @@ body, html {
 }
 
 .location-btn {
+  display: inline-block;
+  margin-top: 1rem; /* agrega espacio entre la dirección y el botón */
   padding: 0.6rem 1.2rem;
-  background-color: #d4af37;
-  color: #fff;
+  background-color: #d4af37; /* o el color de tu diseño */
+  color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .location-btn:hover {
-  background-color: #c0982c;
+  background-color: #b8932e;
 }
+
 
 @media (max-width: 768px) {
   .ceremony-content,
@@ -504,6 +508,8 @@ body, html {
 }
 
 .gift-btn {
+  display: inline-block;
+  margin-top: 1rem; /* Agrega espacio arriba del botón */
   padding: 0.6rem 1.2rem;
   background-color: #d4af37;
   color: #fff;
@@ -512,11 +518,13 @@ body, html {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-decoration: none; /* Asegura que el link no tenga subrayado */
 }
 
 .gift-btn:hover {
   background-color: #c0982c;
 }
+
 
 
 /* Confirmacion */
@@ -635,10 +643,10 @@ body, html {
 /* Responsive */
 @media (max-width: 600px) {
   .final-section h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .final-section .bride-groom {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
 }
