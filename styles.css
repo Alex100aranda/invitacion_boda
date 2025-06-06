@@ -41,7 +41,8 @@ body, html {
 }
 
 .overlay h1 {
-  font-size: 10vw;
+  font-size: 11vw;
+  margin-bottom: 1rem;
 }
 
 .overlay h2 {
